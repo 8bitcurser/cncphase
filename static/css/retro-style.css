@@ -1154,6 +1154,46 @@ body {
 .combatant-card {
   background-color: var(--color-bg-dark) !important;
   color: var(--color-text-primary) !important;
+  position: relative;
+}
+
+.combatant-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+.combatant-card__title-row {
+  flex: 1;
+  min-width: 0;
+}
+
+.combatant-card__delete-btn {
+  background: var(--color-danger-medium) !important;
+  color: var(--color-text-primary) !important;
+  border: var(--border-thin) solid var(--color-danger-dark) !important;
+  width: 32px !important;
+  height: 32px !important;
+  font-size: var(--font-size-lg) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  box-shadow:
+    0 var(--border-thin) 0 var(--color-danger-dark),
+    var(--pixel-border-shadow) !important;
+}
+
+.combatant-card__delete-btn:hover {
+  background: var(--color-danger-bright) !important;
+  box-shadow:
+    0 var(--border-thin) 0 var(--color-danger-dark),
+    var(--pixel-border-glow) !important;
 }
 
 .dashboard h2,
@@ -1223,6 +1263,7 @@ main {
   color: var(--color-text-primary) !important;
   border: var(--border-medium) solid var(--color-secondary-bright);
   padding: var(--spacing-xl);
+  padding-top: calc(var(--spacing-xl) + 48px);
   max-width: 800px;
   max-height: 90vh;
   overflow-y: auto;
@@ -1231,6 +1272,11 @@ main {
     0 0 0 var(--border-thin) var(--color-border-bright),
     0 0 40px rgba(0, 255, 159, 0.5),
     8px 8px 0 var(--color-bg-darkest);
+}
+
+.modal-content h3:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .modal-close {

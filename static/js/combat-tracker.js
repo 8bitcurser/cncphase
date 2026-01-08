@@ -167,12 +167,13 @@ function bindEventHandlers(elements, state) {
 function showAddCombatantForm(elements) {
   if (!elements.formContainer) return;
 
-  elements.formContainer.style.display = 'block';
-  elements.addCombatantBtn.style.display = 'none';
+  elements.formContainer.classList.remove('hidden');
 
   // Focus the first input field
   const firstInput = elements.form?.querySelector('input');
-  firstInput?.focus();
+  if (firstInput) {
+    setTimeout(() => firstInput.focus(), 100);
+  }
 }
 
 /**
@@ -184,8 +185,7 @@ function showAddCombatantForm(elements) {
 function hideAddCombatantForm(elements) {
   if (!elements.formContainer) return;
 
-  elements.formContainer.style.display = 'none';
-  elements.addCombatantBtn.style.display = 'block';
+  elements.formContainer.classList.add('hidden');
   elements.form?.reset();
 }
 
@@ -234,6 +234,10 @@ function extractCombatantData(formData) {
   // Parse phases - can be single number or comma-separated for enemies
   const phases = phaseInput.split(',').map(p => parseInt(p.trim(), 10)).filter(p => p >= 1 && p <= 5);
 
+  // Create default inventory (20 slots for PCs, calculated for enemies)
+  const inventorySize = type === 'PC' ? 20 : 20; // Default 20, can be customized
+  const inventory = Array(inventorySize).fill('INV');
+
   return {
     id: generateUniqueId(),
     name: name.substring(0, MAX_NAME_LENGTH),
@@ -242,7 +246,7 @@ function extractCombatantData(formData) {
     defense: defense,
     atk: atk,
     def: def,
-    inventory: [], // Skills and equipment that can be crossed off
+    inventory: inventory,
     statuses: [],
     hitToHeart: false,
     deathPhase: null
@@ -771,9 +775,6 @@ function handlePendingCombatant(tracker) {
       const combatant = JSON.parse(pending);
       tracker.addCombatant(combatant);
       sessionStorage.removeItem('pending_combatant');
-
-      // Show a brief notification
-      console.log(`Added ${combatant.name} to combat from Enemy Manager`);
     }
   } catch (error) {
     console.error('Failed to handle pending combatant:', error);
@@ -864,7 +865,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   playerForm?.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('Player form submitted');
 
     const formData = new FormData(playerForm);
     const player = {
@@ -875,9 +875,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       inventory: parseInt(formData.get('inventory'), 10)
     };
 
-    console.log('Saving player:', player);
     const saved = savePlayerData(player);
-    console.log('Player saved:', saved);
 
     if (saved) {
       // Close form modal
@@ -1009,6 +1007,7 @@ function deletePlayerData(playerId) {
 
 function playerToCombatantData(player) {
   return {
+    id: generateUniqueId(),
     name: player.name,
     type: 'PC',
     phases: [player.phase],
@@ -1017,7 +1016,8 @@ function playerToCombatantData(player) {
     def: 0,
     inventory: Array(player.inventory || 20).fill('INV'),
     statuses: [],
-    hitToHeart: false
+    hitToHeart: false,
+    deathPhase: null
   };
 }
 
@@ -1151,8 +1151,6 @@ function fillFormWithEnemy(enemy) {
   if (nameInput) {
     setTimeout(() => nameInput.focus(), 100);
   }
-
-  console.log('Enemy auto-filled:', enemy.name);
 }
 
 // Global functions for inline handlers

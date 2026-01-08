@@ -1,0 +1,22 @@
+# Git
+.git
+.gitignore
+
+# Claude
+.claude
+
+# Documentation
+*.md
+RETRO_STYLING_IMPLEMENTATION.md
+
+# IDE
+.vscode
+.idea
+
+# Temporary files
+tmp
+*.tmp
+*.log
+
+# Mac
+.DS_Store
