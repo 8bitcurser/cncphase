@@ -1,0 +1,58 @@
+package templates
+
+templ RandomTables() {
+	@Layout("Random Tables") {
+		<div class="random-tables">
+			<h2>GM Random Tables</h2>
+
+			<div class="tables-layout">
+				<aside class="table-sidebar">
+					<h3>Tables</h3>
+					<nav id="table-nav" class="table-nav">
+						<!-- Will be populated by JavaScript -->
+					</nav>
+				</aside>
+
+				<main class="table-content">
+					<div id="active-table" class="active-table">
+						<div class="table-header">
+							<h3 id="table-name">Select a table</h3>
+							<p id="table-description" class="table-description"></p>
+						</div>
+
+						<div class="table-controls">
+							<div class="dice-display">
+								<span id="table-dice">--</span>
+							</div>
+							<button id="roll-table-btn" class="btn btn-primary btn-large" disabled>
+								<span class="dice-icon">🎲</span> Roll Table
+							</button>
+						</div>
+
+						<div id="roll-result" class="roll-result hidden">
+							<div class="result-header">Result:</div>
+							<div class="result-roll">
+								<span class="rolled-number" id="rolled-number">--</span>
+							</div>
+							<div class="result-text" id="result-text">--</div>
+						</div>
+
+						<div id="table-entries" class="table-entries">
+							<p class="placeholder-text">Select a table from the sidebar to view its entries</p>
+						</div>
+					</div>
+
+					<div id="roll-history" class="roll-history">
+						<h4>Roll History</h4>
+						<ul id="history-list" class="history-list">
+							<!-- Roll history will appear here -->
+						</ul>
+						<button id="clear-history-btn" class="btn-sm">Clear History</button>
+					</div>
+				</main>
+			</div>
+		</div>
+
+		<script src="/static/js/random-tables.js" type="module"></script>
+	}
+}

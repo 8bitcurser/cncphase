@@ -1,0 +1,330 @@
+{
+  "tables": {
+    "npc-town": {
+      "name": "Ordinary Folks - Town Encounters",
+      "dice": "1d20",
+      "description": "Roll to determine who you meet in town",
+      "entries": [
+        { "roll": 1, "result": "Fruit Vendor - Selling fresh produce" },
+        { "roll": 2, "result": "Librarian - Knowledge keeper" },
+        { "roll": 3, "result": "Crazy Guy - Rambling prophet" },
+        { "roll": 4, "result": "Soldier - Off-duty guard" },
+        { "roll": 5, "result": "Herbalist - Selling remedies" },
+        { "roll": 6, "result": "Merchant - General goods trader" },
+        { "roll": 7, "result": "Caravaner - Traveling trader" },
+        { "roll": 8, "result": "Local Hero - Famous resident" },
+        { "roll": 9, "result": "Blacksmith - Armor and weapons" },
+        { "roll": 10, "result": "Innkeeper - Friendly host" },
+        { "roll": 11, "result": "Street Urchin - Quick child" },
+        { "roll": 12, "result": "Town Drunk - Telling tales" },
+        { "roll": 13, "result": "Priest - Holy servant" },
+        { "roll": 14, "result": "Baker - Fresh bread seller" },
+        { "roll": 15, "result": "Stable Master - Horse keeper" },
+        { "roll": 16, "result": "Butcher - Meat vendor" },
+        { "roll": 17, "result": "Carpenter - Woodworker" },
+        { "roll": 18, "result": "Tailor - Clothing maker" },
+        { "roll": 19, "result": "Alchemist - Potion brewer" },
+        { "roll": 20, "result": "Town Crier - News spreader" }
+      ]
+    },
+    "npc-wilderness": {
+      "name": "Ordinary Folks - Wilderness Encounters",
+      "dice": "1d20",
+      "description": "Roll to determine who you meet in remote areas",
+      "entries": [
+        { "roll": 1, "result": "Weird Hermit - Reclusive mystic" },
+        { "roll": 2, "result": "Trapper - Fur hunter" },
+        { "roll": 3, "result": "Seeker of Wisdom - Wandering philosopher" },
+        { "roll": 4, "result": "Lone Survivor - Sole escapee" },
+        { "roll": 5, "result": "Avenger - Seeking revenge" },
+        { "roll": 6, "result": "Researcher - Studying nature" },
+        { "roll": 7, "result": "Hunter - Tracking game" },
+        { "roll": 8, "result": "Fugitive - On the run" },
+        { "roll": 9, "result": "Messenger - Urgent delivery" },
+        { "roll": 10, "result": "Ghost - Ethereal spirit" },
+        { "roll": 11, "result": "Lost Child - Separated from family" },
+        { "roll": 12, "result": "Bandit - Highwayman" },
+        { "roll": 13, "result": "Druid - Nature guardian" },
+        { "roll": 14, "result": "Ranger - Wilderness guide" },
+        { "roll": 15, "result": "Prospector - Mining explorer" },
+        { "roll": 16, "result": "Pilgrim - Religious traveler" },
+        { "roll": 17, "result": "Bard - Traveling musician" },
+        { "roll": 18, "result": "Tinker - Wandering craftsman" },
+        { "roll": 19, "result": "Refugee - Fleeing danger" },
+        { "roll": 20, "result": "Mysterious Stranger - Unknown origins" }
+      ]
+    },
+    "treasure-coins": {
+      "name": "Coins and Cash",
+      "dice": "1d16",
+      "description": "Roll for currency found",
+      "entries": [
+        { "roll": 1, "result": "Common Crowns (1 pt)" },
+        { "roll": 2, "result": "Gold Thalers (1 pt)" },
+        { "roll": 3, "result": "Pouch of Gold (2 pts)" },
+        { "roll": 4, "result": "Black Coin (1 pt)" },
+        { "roll": 5, "result": "Training Voucher (2 pts)" },
+        { "roll": 6, "result": "Gold Bar (3 pts)" },
+        { "roll": 7, "result": "Silver Ingots (2 pts)" },
+        { "roll": 8, "result": "Gem Bag (3 pts)" },
+        { "roll": 9, "result": "Ancient Coinage (2 pts)" },
+        { "roll": 10, "result": "Royal Seal (3 pts)" },
+        { "roll": 11, "result": "Letter of Credit (2 pts)" },
+        { "roll": 12, "result": "Trade Goods Voucher (1 pt)" },
+        { "roll": 13, "result": "Merchant's Bond (2 pts)" },
+        { "roll": 14, "result": "Treasure Map Fragment (1 pt)" },
+        { "roll": 15, "result": "Noble's Purse (3 pts)" },
+        { "roll": 16, "result": "Roll on Heirloom Coins table" }
+      ]
+    },
+    "treasure-heirloom-coins": {
+      "name": "Heirloom Coins",
+      "dice": "1d10",
+      "description": "Elite rare coins (7-10 pts)",
+      "entries": [
+        { "roll": 1, "result": "Kaargfort Crown (10 pts)" },
+        { "roll": 2, "result": "Mooncrest Crown (10 pts)" },
+        { "roll": 3, "result": "Greentooth Promise (7 pts)" },
+        { "roll": 4, "result": "Royal Dragon Coin (9 pts)" },
+        { "roll": 5, "result": "Ancient Empire Denarius (8 pts)" },
+        { "roll": 6, "result": "Frog-King's Medallion (9 pts)" },
+        { "roll": 7, "result": "Dwarf Lord's Signet (10 pts)" },
+        { "roll": 8, "result": "Elven Moon Token (8 pts)" },
+        { "roll": 9, "result": "War Hero's Medal (7 pts)" },
+        { "roll": 10, "result": "Bloodwing War Commemorative (10 pts)" }
+      ]
+    },
+    "treasure-gems": {
+      "name": "Gems and Minerals",
+      "dice": "1d20",
+      "description": "Roll for precious stones",
+      "entries": [
+        { "roll": 1, "result": "Ruby Dust (1 pt)" },
+        { "roll": 2, "result": "Emerald Shard (2 pts)" },
+        { "roll": 3, "result": "Sapphire Chip (2 pts)" },
+        { "roll": 4, "result": "Diamond Fragment (3 pts)" },
+        { "roll": 5, "result": "Opal (2 pts)" },
+        { "roll": 6, "result": "Jade Piece (2 pts)" },
+        { "roll": 7, "result": "Amethyst (1 pt)" },
+        { "roll": 8, "result": "Topaz (2 pts)" },
+        { "roll": 9, "result": "Moonstone (2 pts)" },
+        { "roll": 10, "result": "Bloodstone (1 pt)" },
+        { "roll": 11, "result": "Onyx (2 pts)" },
+        { "roll": 12, "result": "Pearl (3 pts)" },
+        { "roll": 13, "result": "Turquoise (1 pt)" },
+        { "roll": 14, "result": "Garnet (1 pt)" },
+        { "roll": 15, "result": "Aquamarine (2 pts)" },
+        { "roll": 16, "result": "Citrine (1 pt)" },
+        { "roll": 17, "result": "Obsidian (1 pt)" },
+        { "roll": 18, "result": "Crystal Cluster (3 pts)" },
+        { "roll": 19, "result": "Gold Ore (2 pts)" },
+        { "roll": 20, "result": "Roll on Rare Gems table" }
+      ]
+    },
+    "treasure-rare-gems": {
+      "name": "Rare Gems",
+      "dice": "1d10",
+      "description": "Ultra-rare gemstones (10-12 pts)",
+      "entries": [
+        { "roll": 1, "result": "Dragon Eye (12 pts)" },
+        { "roll": 2, "result": "Deep Key (10 pts)" },
+        { "roll": 3, "result": "Spell Gem (12 pts)" },
+        { "roll": 4, "result": "Sun Gem (10 pts)" },
+        { "roll": 5, "result": "Star Ruby (11 pts)" },
+        { "roll": 6, "result": "Void Diamond (12 pts)" },
+        { "roll": 7, "result": "Living Crystal (11 pts)" },
+        { "roll": 8, "result": "Fey Stone (10 pts)" },
+        { "roll": 9, "result": "Soul Shard (12 pts)" },
+        { "roll": 10, "result": "World Stone (12 pts)" }
+      ]
+    },
+    "potions": {
+      "name": "Potions",
+      "dice": "1d20",
+      "description": "Common magical elixirs (1-2 pts)",
+      "entries": [
+        { "roll": 1, "result": "Speed Potion - Double move speed (1 pt)" },
+        { "roll": 2, "result": "Healing Potion - Restore 1 skill (2 pts)" },
+        { "roll": 3, "result": "Vanish Potion - Invisibility 1D6 phases (2 pts)" },
+        { "roll": 4, "result": "Boaster's Ale - +2 to Oratory (1 pt)" },
+        { "roll": 5, "result": "Night Vision - See in darkness (1 pt)" },
+        { "roll": 6, "result": "Liquid Courage - Ignore fear (1 pt)" },
+        { "roll": 7, "result": "Cat's Grace - +2 Evade (2 pts)" },
+        { "roll": 8, "result": "Bull's Strength - +2 Muscle (2 pts)" },
+        { "roll": 9, "result": "Antitoxin - Cure poison (2 pts)" },
+        { "roll": 10, "result": "Fire Breath - Exhale flame 1D6 (1 pt)" },
+        { "roll": 11, "result": "Water Breathing - Breathe underwater (1 pt)" },
+        { "roll": 12, "result": "Feather Fall - Safe falling (1 pt)" },
+        { "roll": 13, "result": "Stone Skin - +2 DEF (2 pts)" },
+        { "roll": 14, "result": "Clarity - +2 Investigate (1 pt)" },
+        { "roll": 15, "result": "Warmth - Ignore cold (1 pt)" },
+        { "roll": 16, "result": "Climbing Oil - +2 Climber (1 pt)" },
+        { "roll": 17, "result": "Truth Serum - Cannot lie (2 pts)" },
+        { "roll": 18, "result": "Sleep Draught - Sleep 1D6 rounds (1 pt)" },
+        { "roll": 19, "result": "Luck Tonic - Reroll once (2 pts)" },
+        { "roll": 20, "result": "Roll on Potent Potions table" }
+      ]
+    },
+    "potions-potent": {
+      "name": "Potent Potions",
+      "dice": "1d10",
+      "description": "Powerful magical elixirs (3-10 pts)",
+      "entries": [
+        { "roll": 1, "result": "Iron Gut Whisky - Resist all poison (5 pts)" },
+        { "roll": 2, "result": "Flight Flask - Fly 1 scene (7 pts)" },
+        { "roll": 3, "result": "Iron Bones - +5 DEF (5 pts)" },
+        { "roll": 4, "result": "Elixir of Immortals - Restore all inventory (10 pts)" },
+        { "roll": 5, "result": "Giant's Might - 2x damage 1 round (6 pts)" },
+        { "roll": 6, "result": "Phoenix Tears - Return from death once (10 pts)" },
+        { "roll": 7, "result": "Time Stop - Extra phase this round (8 pts)" },
+        { "roll": 8, "result": "Invulnerability - No damage 1D4 phases (9 pts)" },
+        { "roll": 9, "result": "Mind Shield - Immune mental effects (4 pts)" },
+        { "roll": 10, "result": "Regeneration - Heal 1 skill/phase (7 pts)" }
+      ]
+    },
+    "magic-scrolls": {
+      "name": "Spell Scrolls",
+      "dice": "1d10",
+      "description": "One-use spell scrolls (1-10 pts)",
+      "entries": [
+        { "roll": 1, "result": "Pyroblast - 2D8 fire damage (5 pts)" },
+        { "roll": 2, "result": "Translocate - Teleport short distance (4 pts)" },
+        { "roll": 3, "result": "Swarm - Summon insects (3 pts)" },
+        { "roll": 4, "result": "Salvation - Heal all nearby (10 pts)" },
+        { "roll": 5, "result": "Udin's Light - Banish undead (6 pts)" },
+        { "roll": 6, "result": "Ice Storm - Freeze area (7 pts)" },
+        { "roll": 7, "result": "Lightning Bolt - 2D10 shock (6 pts)" },
+        { "roll": 8, "result": "Dispel Magic - Cancel one spell (5 pts)" },
+        { "roll": 9, "result": "Shield Wall - +5 DEF all allies (8 pts)" },
+        { "roll": 10, "result": "Meteor Swarm - Devastating fire (10 pts)" }
+      ]
+    },
+    "unusual-armaments": {
+      "name": "Unusual Armaments",
+      "dice": "1d20",
+      "description": "Special weapons and armor (3-5 pts)",
+      "entries": [
+        { "roll": 1, "result": "Cavalry Spear - 1D10, reach (3 pts)" },
+        { "roll": 2, "result": "Iron Flail - 1D8, ignores shields (3 pts)" },
+        { "roll": 3, "result": "Tower Sword - 2D10, two-handed (5 pts)" },
+        { "roll": 4, "result": "Giant Bow - 2D12, requires Muscle 8 (5 pts)" },
+        { "roll": 5, "result": "Ruby Dagger - 1D6, deadly (4 pts)" },
+        { "roll": 6, "result": "Battle Axe - 1D10, cleave (3 pts)" },
+        { "roll": 7, "result": "War Hammer - 1D10, armor breaking (3 pts)" },
+        { "roll": 8, "result": "Halberd - 1D12, reach (4 pts)" },
+        { "roll": 9, "result": "Composite Bow - 1D10, fast (3 pts)" },
+        { "roll": 10, "result": "Spiked Chain - 1D8, disarm (3 pts)" },
+        { "roll": 11, "result": "Tower Shield - +3 DEF (3 pts)" },
+        { "roll": 12, "result": "Plate Armor - +5 DEF (5 pts)" },
+        { "roll": 13, "result": "Mithril Chain - +3 DEF, lightweight (4 pts)" },
+        { "roll": 14, "result": "Dragon Scale Mail - +4 DEF, fire resist (5 pts)" },
+        { "roll": 15, "result": "Throwing Axes (6) - 1D6 each (3 pts)" },
+        { "roll": 16, "result": "Crossbow - 1D10, piercing (3 pts)" },
+        { "roll": 17, "result": "Bastard Sword - 1D10/2D8 (4 pts)" },
+        { "roll": 18, "result": "Scimitar - 1D8, fast (3 pts)" },
+        { "roll": 19, "result": "Morning Star - 1D10, crushing (3 pts)" },
+        { "roll": 20, "result": "Roll on Weapon Cache table" }
+      ]
+    },
+    "weapon-cache": {
+      "name": "Weapon Cache",
+      "dice": "1d10",
+      "description": "Major weapon finds (8-15 pts)",
+      "entries": [
+        { "roll": 1, "result": "Giant Battleaxe - 2D20, requires Muscle 12 (15 pts)" },
+        { "roll": 2, "result": "Ballista - 3D12, mounted (12 pts)" },
+        { "roll": 3, "result": "Siege Crossbow - 2D12, penetrating (10 pts)" },
+        { "roll": 4, "result": "Dragon Slayer Sword - 2D12, +5 vs Dragons (15 pts)" },
+        { "roll": 5, "result": "Ancient Warhammer - 2D10, stun (10 pts)" },
+        { "roll": 6, "result": "Elven Blade - 1D12, magic, balanced (12 pts)" },
+        { "roll": 7, "result": "Dwarven Forge Axe - 2D8, armor break (10 pts)" },
+        { "roll": 8, "result": "Runic Spear - 1D12, return, magic (11 pts)" },
+        { "roll": 9, "result": "Shadow Bow - 2D8, silent, magic (10 pts)" },
+        { "roll": 10, "result": "Legendary Blade - 2D12, special power (15 pts)" }
+      ]
+    },
+    "enemy-modifications": {
+      "name": "Enemy Modifications",
+      "dice": "1d12",
+      "description": "Tactical modifications for enemies",
+      "entries": [
+        { "roll": 1, "result": "Heavy Attacks - +5 ATK" },
+        { "roll": 2, "result": "Armored - +5 DEF" },
+        { "roll": 3, "result": "Destroyer - All attacks cause destroy attrition" },
+        { "roll": 4, "result": "Brutal - All attacks cause brutal attrition (1D6)" },
+        { "roll": 5, "result": "Stun - Attacks stun for 1 round" },
+        { "roll": 6, "result": "Fast - Acts in 3 phases" },
+        { "roll": 7, "result": "Huge - 2x HP" },
+        { "roll": 8, "result": "Regeneration - Heal D100% HP each round" },
+        { "roll": 9, "result": "Flying - Can't be hit by melee normally" },
+        { "roll": 10, "result": "Invisible - +5 ATK, must detect first" },
+        { "roll": 11, "result": "Magic Resistant - Spells at -5" },
+        { "roll": 12, "result": "Pack Leader - Summons 1D4 allies" }
+      ]
+    },
+    "enemy-events": {
+      "name": "Enemy Events",
+      "dice": "1d12",
+      "description": "Mid-battle encounter events",
+      "entries": [
+        { "roll": 1, "result": "Frenzy - ATK +3, DEF -2 until end of combat" },
+        { "roll": 2, "result": "Explosive Displacement - Moves and deals basic attrition to all nearby" },
+        { "roll": 3, "result": "Parasites - 2D6 small creatures spawn from body" },
+        { "roll": 4, "result": "Terrain Damage - Floor collapses, walls crumble" },
+        { "roll": 5, "result": "Self Destruct - Will explode in 1D4 phases for brutal attrition" },
+        { "roll": 6, "result": "Possessor - Next attack possesses victim if successful" },
+        { "roll": 7, "result": "Final Form - Transform into bigger version at 0 HP" },
+        { "roll": 8, "result": "Split - Divides into 2 clones at half HP" },
+        { "roll": 9, "result": "Rallying Cry - All allies heal 1D10 HP" },
+        { "roll": 10, "result": "Summon Reinforcements - 1D6 additional enemies arrive" },
+        { "roll": 11, "result": "Environmental Hazard - Room fills with gas/water/fire" },
+        { "roll": 12, "result": "Desperation Move - One massive attack hitting all targets" }
+      ]
+    },
+    "herbalism-desert": {
+      "name": "Desert Xeromorphs",
+      "dice": "1d8",
+      "description": "Desert plants (Forage -5 penalty)",
+      "entries": [
+        { "roll": 1, "result": "Barrel Cactus - Water source" },
+        { "roll": 2, "result": "Peyote - Hallucination, astral projection" },
+        { "roll": 3, "result": "Agave - +2 Resist" },
+        { "roll": 4, "result": "Desert Rose - Beauty, charm effect" },
+        { "roll": 5, "result": "Yucca - Healing fiber" },
+        { "roll": 6, "result": "Creosote - Fire damage +1D4" },
+        { "roll": 7, "result": "Prickly Pear - Food, restore 1 skill" },
+        { "roll": 8, "result": "Blood Thorn - Weapon poison 1D6" }
+      ]
+    },
+    "herbalism-forest": {
+      "name": "Forest & Grassland Plants",
+      "dice": "1d8",
+      "description": "Forest plants (No penalty)",
+      "entries": [
+        { "roll": 1, "result": "Cnocc Thistle - Induces fear in enemies" },
+        { "roll": 2, "result": "Warrior's Foil - +2 Muscle for 1 scene" },
+        { "roll": 3, "result": "Golden Rhus - Reroll any failed roll" },
+        { "roll": 4, "result": "Slough Pine - 1D8 poison damage over 3 rounds" },
+        { "roll": 5, "result": "Oak Bark - +1 DEF for 1 scene" },
+        { "roll": 6, "result": "Moonflower - Night vision 1 scene" },
+        { "roll": 7, "result": "Witch Hazel - Heal 1 equipment attrition" },
+        { "roll": 8, "result": "Fern Root - Antidote to common poison" }
+      ]
+    },
+    "herbalism-bog": {
+      "name": "Bog & Wetland Fungi",
+      "dice": "1d8",
+      "description": "Swamp fungi (Forage -2 penalty)",
+      "entries": [
+        { "roll": 1, "result": "Puffball - Smoke cloud concealment" },
+        { "roll": 2, "result": "Swamp Moss - +2 Stealth" },
+        { "roll": 3, "result": "Giant's Mushroom - Grow 2x size 1D6 phases" },
+        { "roll": 4, "result": "Ghost Cap - Speak with dead" },
+        { "roll": 5, "result": "Slime Mold - Corrosive weapon coating" },
+        { "roll": 6, "result": "Bog Berry - Cure disease" },
+        { "roll": 7, "result": "Death Cap - Lethal poison (2D10)" },
+        { "roll": 8, "result": "Luminous Fungus - Light source 1 scene" }
+      ]
+    }
+  }
+}

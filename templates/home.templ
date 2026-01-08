@@ -1,0 +1,37 @@
+package templates
+
+templ Home() {
+	@Layout("Home") {
+		<div class="dashboard">
+			<h2>Welcome, Game Master</h2>
+			<p>Select a tool to help run your Crown and Skull game:</p>
+			<div class="card-grid">
+				<div class="card card-highlight">
+					<h3>Combat Tracker</h3>
+					<p>Track phases, defense, ATK/DEF, attrition, and status effects during combat encounters.</p>
+					<a href="/combat-tracker" class="btn btn-primary">Launch Tracker</a>
+				</div>
+				<div class="card card-highlight">
+					<h3>Enemy Manager</h3>
+					<p>Browse 25+ enemies, create custom foes, and quick-add to combat. Includes full stat blocks and tactics.</p>
+					<a href="/enemy-manager" class="btn btn-primary">Manage Enemies</a>
+				</div>
+				<div class="card card-highlight">
+					<h3>Random Tables</h3>
+					<p>Roll on treasure, NPC, potion, herbalism, and enemy modification tables. Includes roll history.</p>
+					<a href="/random-tables" class="btn btn-primary">Roll Tables</a>
+				</div>
+				<div class="card">
+					<h3>Combat Cheatsheet</h3>
+					<p>Quick reference for 5-phase combat, defense rolls, attrition system, and damage.</p>
+					<a href="/cheatsheet/combat" class="btn">View Combat Rules</a>
+				</div>
+				<div class="card">
+					<h3>Magic Cheatsheet</h3>
+					<p>Reference for spell casting, customization, effects, and limitations.</p>
+					<a href="/cheatsheet/magic" class="btn">View Magic Rules</a>
+				</div>
+			</div>
+		</div>
+	}
+}

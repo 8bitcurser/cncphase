@@ -1,0 +1,103 @@
+package templates
+
+templ MagicCheatsheet() {
+	@Layout("Magic Rules") {
+		<div class="cheatsheet">
+			<h2>Crown and Skull Magic Cheatsheet</h2>
+
+			<section class="rule-section">
+				<h3>Critical Concepts for All Spells</h3>
+				<ul>
+					<li><strong>Casts and Expend:</strong> Spells include 1 cast by default. Once expended, must be studied again in rest and safety to cast again. Add casts with customization (3 pts each)</li>
+					<li><strong>Magic Skill:</strong> Roll Magic skill to contain Infernal/Unstable spells, or as defense against enemy magic</li>
+					<li><strong>Somatics:</strong> By default, all spells require audible words and gestures with both hands</li>
+					<li><strong>Duration:</strong> Default is 1D6 phases. Effect ends at the end of the caster's phase</li>
+					<li><strong>Effect:</strong> Default output is 1D6 (damage, healing, etc.). Upgrade with customization</li>
+					<li><strong>Range:</strong> Default requires touch. Upgrade to 'ranged' (visible targets in scene) or 'area' with customization</li>
+					<li><strong>Targets:</strong> Default affects single target. Upgrade to multiple targets/areas with customization</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Basic Spell Costs</h3>
+				<ul>
+					<li>Basic spells cost 3 hero points</li>
+					<li>Examples: Armor (+3 Defense), Fireblast, Healing Light (heal 1 skill attrition), Purify, Sprint (double move speed)</li>
+					<li>All use default values unless upgraded</li>
+					<li>Must be in safe place to acquire/upgrade spells</li>
+					<li>Requires appropriate facilities or mentors</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Spell Upgrades (3 pts each)</h3>
+				<ul>
+					<li><strong>Additional Cast:</strong> Add 1 cast to spell</li>
+					<li><strong>Ranged:</strong> Cast at long range to visible targets (most of scene)</li>
+					<li><strong>Area:</strong> Affect arm's-width radius instead of single target</li>
+					<li><strong>Dice Upgrade:</strong> Increase dice by one grade (D6→D8→D10→D12)</li>
+					<li><strong>Powerful:</strong> Add additional die or upgrade</li>
+					<li><strong>Duration:</strong> Upgrade from 1D6 phases to 1 full round</li>
+					<li><strong>Lasting:</strong> Make effect permanent (15 pts, requires GM approval)</li>
+					<li><strong>Silent Spell:</strong> Cast with no spoken words</li>
+					<li><strong>Still:</strong> Cast with no gestures</li>
+					<li>No single effect can stack more than 3 times total</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Common Spell Effects (3 pts each)</h3>
+				<ul>
+					<li><strong>Blast:</strong> Inflict magic damage of specified element/theme</li>
+					<li><strong>Restore:</strong> Heal 1 skill attrition</li>
+					<li><strong>Arcane Armor:</strong> Roll output effect and add to Defense</li>
+					<li><strong>Dominate:</strong> Target rolls D20, surpass with effect to dominate</li>
+					<li><strong>Cloak:</strong> Reduce chance of being spotted</li>
+					<li><strong>Summon:</strong> Conjure 1D6 1-attrition minions/constructs</li>
+					<li><strong>Dispel:</strong> Roll output to surpass spell's point cost to cancel</li>
+					<li><strong>Enchant:</strong> Imbue weapon/object with gear effect</li>
+					<li><strong>Mend:</strong> Repair 1 weapon, item, or armor</li>
+					<li><strong>Transport:</strong> Teleport person (effect × 10 feet)</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Spell Limitations (gain 3 pts each)</h3>
+				<ul>
+					<li><strong>Exhausting:</strong> Use entire phase to cast, no other actions</li>
+					<li><strong>Infernal:</strong> Demons/devils aware when cast, may investigate</li>
+					<li><strong>Unstable:</strong> Roll Magic on crit fail or suffer backlash</li>
+					<li><strong>Blood Cost:</strong> Casting inflicts 1 attrition on caster</li>
+					<li><strong>Environmental:</strong> Only works in specific environment</li>
+					<li><strong>Limited Use:</strong> Only works on specific target type</li>
+					<li>Limitations reduce spell cost by 3 pts each</li>
+					<li>Minimum spell cost is always 1 pt</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Custom Spell Creation</h3>
+				<ul>
+					<li>Start with a Basic Spell or create from scratch</li>
+					<li>Each effect added costs 3 pts</li>
+					<li>Each limitation reduces cost by 3 pts</li>
+					<li>No single effect can stack more than 3 times</li>
+					<li>Must be in safe place for 1+ days to create new spells</li>
+					<li>Requires GM approval</li>
+					<li>Example: Ranged Fireblast = 3 (base) + 3 (ranged) + 3 (dice upgrade) = 9 pts</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Divine Magic & Other Types</h3>
+				<ul>
+					<li><strong>Faith Skill:</strong> Roll Faith skill to cast divine spells/miracles</li>
+					<li><strong>Paragon of Faith:</strong> Faith skill grows by 2 on successful cast (max 16)</li>
+					<li><strong>Wild Magic:</strong> Uses Magic skill, unpredictable effects</li>
+					<li><strong>Antimagic:</strong> Roll Magic skill to suppress or negate magic effects</li>
+					<li>See Path of Magic section for specialized magic systems</li>
+				</ul>
+			</section>
+		</div>
+	}
+}

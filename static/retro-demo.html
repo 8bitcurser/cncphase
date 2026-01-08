@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Bit Retro Styling Demo - Crown and Skull</title>
+    <link rel="stylesheet" href="css/retro-style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <h1><a href="#">Crown & Skull</a></h1>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Combat</a></li>
+                <li><a href="#">Magic</a></li>
+                <li><a href="#">Tracker</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Typography Section -->
+        <section class="card">
+            <div class="card-header">
+                <h2>Typography Showcase</h2>
+            </div>
+            <h1>Level 1 Heading - Quest Title</h1>
+            <h2>Level 2 Heading - Chapter Name</h2>
+            <h3>Level 3 Heading - Section Title</h3>
+            <h4>Level 4 Heading - Subsection</h4>
+
+            <p>
+                This is a paragraph with <a href="#">a hyperlink</a> that glows on hover.
+                The font mimics classic 8-bit RPG text boxes with perfect pixel alignment.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <p>
+                Inline code example: <code>rollDice(1d20 + 5)</code>
+            </p>
+
+            <pre><code>function attackRoll() {
+  return Math.floor(Math.random() * 20) + 1;
+}</code></pre>
+        </section>
+
+        <!-- Button Showcase -->
+        <section class="card">
+            <div class="card-header">
+                <h3>Button Styles</h3>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Default Buttons</h4>
+                <div class="btn-group">
+                    <button>Default</button>
+                    <button class="btn-primary">Primary</button>
+                    <button class="btn-accent">Accent</button>
+                    <button class="btn-danger">Danger</button>
+                    <button disabled>Disabled</button>
+                </div>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Button Sizes</h4>
+                <div class="btn-group">
+                    <button class="btn-sm">Small</button>
+                    <button>Normal</button>
+                    <button class="btn-lg">Large</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Elements -->
+        <section class="card">
+            <div class="card-header">
+                <h3>Form Controls</h3>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="char-name">Character Name</label>
+                    <input type="text" id="char-name" placeholder="Enter character name...">
+                </div>
+
+                <div class="form-group">
+                    <label for="char-class">Character Class</label>
+                    <select id="char-class">
+                        <option>Select class...</option>
+                        <option>Warrior</option>
+                        <option>Mage</option>
+                        <option>Rogue</option>
+                        <option>Cleric</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="char-bio">Character Background</label>
+                    <textarea id="char-bio" placeholder="Enter backstory..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" checked>
+                        Enable combat tracker
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="radio" name="difficulty" checked>
+                        Normal Difficulty
+                    </label>
+                    <label>
+                        <input type="radio" name="difficulty">
+                        Hard Difficulty
+                    </label>
+                </div>
+
+                <div class="form-group error">
+                    <label for="error-input">Error State Example</label>
+                    <input type="text" id="error-input" value="Invalid input">
+                    <span class="error-message">This field contains an error!</span>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn-primary">Submit</button>
+                    <button type="reset" class="btn-danger">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Stats and Health Bars -->
+        <section class="card card-glow">
+            <div class="card-header">
+                <h3>Character Stats & Health Bars</h3>
+            </div>
+
+            <div class="mb-lg">
+                <div class="stat-box">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">85</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">MP</span>
+                    <span class="stat-value">42</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">STR</span>
+                    <span class="stat-value">18</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">DEX</span>
+                    <span class="stat-value">14</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">INT</span>
+                    <span class="stat-value">12</span>
+                </div>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Health: Full (100%)</h4>
+                <div class="health-bar">
+                    <div class="health-bar-fill" style="width: 100%;">
+                        <span class="health-bar-text">100 / 100</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Health: Good (75%)</h4>
+                <div class="health-bar">
+                    <div class="health-bar-fill" style="width: 75%;">
+                        <span class="health-bar-text">75 / 100</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Health: Low (35%)</h4>
+                <div class="health-bar">
+                    <div class="health-bar-fill low" style="width: 35%;">
+                        <span class="health-bar-text">35 / 100</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Health: Critical (15%)</h4>
+                <div class="health-bar">
+                    <div class="health-bar-fill critical" style="width: 15%;">
+                        <span class="health-bar-text">15 / 100</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid Layout Example -->
+        <section>
+            <h2 class="mb-md">Grid Layout - Character Party</h2>
+            <div class="grid grid-3 gap-md mb-lg">
+                <div class="card">
+                    <h4>Warrior</h4>
+                    <p class="text-secondary">Tank</p>
+                    <div class="health-bar">
+                        <div class="health-bar-fill" style="width: 90%;">
+                            <span class="health-bar-text">90/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Mage</h4>
+                    <p class="text-accent">DPS</p>
+                    <div class="health-bar">
+                        <div class="health-bar-fill" style="width: 60%;">
+                            <span class="health-bar-text">60/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Cleric</h4>
+                    <p class="text-primary">Healer</p>
+                    <div class="health-bar">
+                        <div class="health-bar-fill low" style="width: 40%;">
+                            <span class="health-bar-text">40/100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panels and Badges -->
+        <section class="card">
+            <div class="card-header">
+                <h3>Panels & Badges</h3>
+            </div>
+
+            <div class="panel mb-md">
+                <h4>Combat Log Panel</h4>
+                <p>Goblin attacks for <span class="text-danger">12 damage</span>!</p>
+                <p>Hero counterattacks for <span class="text-secondary">18 damage</span>!</p>
+                <p class="text-accent">Critical hit!</p>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Status Badges</h4>
+                <span class="badge">Level 5</span>
+                <span class="badge success">Active</span>
+                <span class="badge danger">Poisoned</span>
+                <span class="badge warning">Low HP</span>
+            </div>
+        </section>
+
+        <!-- Utility Classes Demo -->
+        <section class="card">
+            <div class="card-header">
+                <h3>Utility Classes</h3>
+            </div>
+
+            <div class="mb-md">
+                <p class="text-primary">Primary colored text</p>
+                <p class="text-secondary">Secondary colored text</p>
+                <p class="text-accent">Accent colored text</p>
+                <p class="text-danger">Danger colored text</p>
+                <p class="text-muted">Muted colored text</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="mb-md">
+                <div class="pixel-border p-md mb-sm">Element with pixel border</div>
+                <div class="pixel-border-glow p-md mb-sm">Element with glowing pixel border</div>
+            </div>
+
+            <div class="divider-glow"></div>
+
+            <div class="mb-md">
+                <p class="glow">This text has a glow effect</p>
+                <p class="blink">This text blinks (classic!)</p>
+            </div>
+        </section>
+
+        <!-- Special Components -->
+        <section class="card">
+            <div class="card-header">
+                <h3>Special Components</h3>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Loading Spinner</h4>
+                <div class="loading"></div>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Notification Examples</h4>
+                <button onclick="showNotification('success')">Show Success</button>
+                <button onclick="showNotification('error')" class="btn-danger">Show Error</button>
+                <button onclick="showNotification('warning')" class="btn-accent">Show Warning</button>
+            </div>
+
+            <div class="mb-md">
+                <h4 class="mb-sm">Modal Dialog</h4>
+                <button onclick="showDialog()">Open Dialog</button>
+            </div>
+        </section>
+
+        <!-- Color Palette Reference -->
+        <section class="card">
+            <div class="card-header">
+                <h3>Color Palette Reference</h3>
+            </div>
+
+            <div class="grid grid-4 gap-sm">
+                <div style="background: #2b0f54; padding: 20px; border: 2px solid #fff;">
+                    <small>Primary Dark</small>
+                </div>
+                <div style="background: #463464; padding: 20px; border: 2px solid #fff;">
+                    <small>Primary Medium</small>
+                </div>
+                <div style="background: #00ff9f; padding: 20px; border: 2px solid #fff; color: #000;">
+                    <small>Secondary Bright</small>
+                </div>
+                <div style="background: #72f1b8; padding: 20px; border: 2px solid #fff; color: #000;">
+                    <small>Secondary Medium</small>
+                </div>
+                <div style="background: #ffd700; padding: 20px; border: 2px solid #fff; color: #000;">
+                    <small>Accent Bright</small>
+                </div>
+                <div style="background: #ffaa00; padding: 20px; border: 2px solid #fff; color: #000;">
+                    <small>Accent Medium</small>
+                </div>
+                <div style="background: #8b0000; padding: 20px; border: 2px solid #fff;">
+                    <small>Danger Dark</small>
+                </div>
+                <div style="background: #ff0040; padding: 20px; border: 2px solid #fff;">
+                    <small>Danger Bright</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Crown and Skull GM Webapp - 8-Bit Retro Edition</p>
+    </footer>
+
+    <!-- JavaScript for Demo Interactions -->
+    <script>
+        /**
+         * Show a notification demo
+         * @param {string} type - success, error, or warning
+         */
+        function showNotification(type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+
+            const messages = {
+                success: 'Quest completed! You gained 500 XP.',
+                error: 'Critical failure! You took 20 damage.',
+                warning: 'Low health! Use a potion.'
+            };
+
+            notification.textContent = messages[type] || 'Notification';
+            document.body.appendChild(notification);
+
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'fadeIn 0.3s ease-out reverse';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        /**
+         * Show a modal dialog demo
+         */
+        function showDialog() {
+            // Create overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'dialog-overlay';
+
+            // Create dialog
+            const dialog = document.createElement('div');
+            dialog.className = 'dialog';
+            dialog.innerHTML = `
+                <h3 class="mb-md">Level Up!</h3>
+                <p class="mb-lg">You have reached level 6. Choose an attribute to increase:</p>
+                <div class="btn-group">
+                    <button class="btn-primary" onclick="closeDialog()">Strength</button>
+                    <button class="btn-primary" onclick="closeDialog()">Dexterity</button>
+                    <button class="btn-primary" onclick="closeDialog()">Intelligence</button>
+                </div>
+                <div class="mt-md">
+                    <button class="btn-sm" onclick="closeDialog()">Cancel</button>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+            document.body.appendChild(dialog);
+
+            // Close on overlay click
+            overlay.addEventListener('click', closeDialog);
+        }
+
+        /**
+         * Close the modal dialog
+         */
+        function closeDialog() {
+            const overlay = document.querySelector('.dialog-overlay');
+            const dialog = document.querySelector('.dialog');
+
+            if (overlay) overlay.remove();
+            if (dialog) dialog.remove();
+        }
+
+        // Add keyboard support for dialog
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeDialog();
+            }
+        });
+
+        // Demo: Shake effect on danger buttons
+        document.querySelectorAll('.btn-danger').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (this.textContent.includes('Reset') || this.textContent.includes('Error')) {
+                    this.classList.add('shake');
+                    setTimeout(() => this.classList.remove('shake'), 500);
+                }
+            });
+        });
+
+        console.log('%c8-BIT RETRO STYLING LOADED', 'font-family: monospace; font-size: 16px; color: #00ff9f; background: #000; padding: 10px;');
+        console.log('All components and effects are ready to use!');
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+package templates
+
+templ EnemyManager() {
+	@Layout("Enemy Manager") {
+		<div class="enemy-manager">
+			<h2>Enemy & NPC Manager</h2>
+
+			<div class="manager-controls">
+				<div class="search-filter-section">
+					<input type="text" id="enemy-search" class="search-input" placeholder="Search enemies..."/>
+
+					<select id="category-filter">
+						<option value="">All Categories</option>
+						<option value="Monster">Monster</option>
+						<option value="Beast">Beast</option>
+						<option value="Undead">Undead</option>
+						<option value="Dragon">Dragon</option>
+						<option value="Elemental">Elemental</option>
+						<option value="Demon">Demon</option>
+						<option value="Humanoid">Humanoid</option>
+						<option value="Construct">Construct</option>
+						<option value="Ooze">Ooze</option>
+					</select>
+
+					<select id="phase-filter">
+						<option value="">All Phases</option>
+						<option value="1">Phase 1</option>
+						<option value="2">Phase 2</option>
+						<option value="3">Phase 3</option>
+						<option value="4">Phase 4</option>
+						<option value="5">Phase 5</option>
+					</select>
+				</div>
+
+				<div class="action-buttons">
+					<button id="create-enemy-btn" class="btn btn-primary">Create New Enemy</button>
+					<button id="random-enemy-btn" class="btn">Random Enemy</button>
+				</div>
+			</div>
+
+			<div id="enemy-grid" class="enemy-grid">
+				<!-- Enemy cards will be dynamically inserted here -->
+			</div>
+
+			<div id="enemy-detail-modal" class="modal hidden">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<div id="enemy-detail-content">
+						<!-- Detailed enemy info will be shown here -->
+					</div>
+					<div class="modal-actions">
+						<button id="add-to-combat-btn" class="btn btn-primary">Add to Combat</button>
+						<button id="edit-enemy-btn" class="btn">Edit</button>
+						<button id="duplicate-enemy-btn" class="btn">Duplicate</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="create-enemy-modal" class="modal hidden">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<h3>Create New Enemy</h3>
+					<form id="enemy-create-form">
+						<div class="form-group">
+							<label for="enemy-name">Name:</label>
+							<input type="text" id="enemy-name" name="name" required/>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-category">Category:</label>
+							<select id="enemy-category" name="category" required>
+								<option value="Monster">Monster</option>
+								<option value="Beast">Beast</option>
+								<option value="Undead">Undead</option>
+								<option value="Dragon">Dragon</option>
+								<option value="Elemental">Elemental</option>
+								<option value="Demon">Demon</option>
+								<option value="Humanoid">Humanoid</option>
+								<option value="Construct">Construct</option>
+								<option value="Ooze">Ooze</option>
+							</select>
+						</div>
+
+						<div class="stat-row">
+							<div class="form-group">
+								<label for="enemy-hp">HP:</label>
+								<input type="number" id="enemy-hp" name="hp" min="1" value="20" required/>
+							</div>
+
+							<div class="form-group">
+								<label for="enemy-atk">ATK:</label>
+								<input type="number" id="enemy-atk" name="atk" min="0" value="2" required/>
+							</div>
+
+							<div class="form-group">
+								<label for="enemy-def">DEF:</label>
+								<input type="number" id="enemy-def" name="def" min="0" value="2" required/>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-phases">Phases (comma-separated, e.g., "1,3,5"):</label>
+							<input type="text" id="enemy-phases" name="phases" placeholder="1,3,5" required/>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-tactics">Number of Tactics:</label>
+							<select id="enemy-tactics" name="tactics" required>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-description">Description:</label>
+							<textarea id="enemy-description" name="description" rows="2"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-tactic1">Tactic 1 (Move/Reposition):</label>
+							<textarea id="enemy-tactic1" name="tactic1" rows="2"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-tactic2_5">Tactics 2-5 (Common Attack):</label>
+							<textarea id="enemy-tactic2_5" name="tactic2_5" rows="2"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-tactic6">Tactic 6 (AoE Attack):</label>
+							<textarea id="enemy-tactic6" name="tactic6" rows="2"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-attrition">Primary Attrition Type:</label>
+							<select id="enemy-attrition" name="attritionType">
+								<option value="Basic">Basic</option>
+								<option value="Flesh">Flesh</option>
+								<option value="Equipment">Equipment</option>
+								<option value="Destroy">Destroy</option>
+								<option value="Brutal">Brutal</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="enemy-special">Special Abilities/Notes:</label>
+							<textarea id="enemy-special" name="special" rows="2" placeholder="Optional"></textarea>
+						</div>
+
+						<div class="form-buttons">
+							<button type="submit" class="btn btn-primary">Create Enemy</button>
+							<button type="button" class="modal-close btn">Cancel</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="/static/js/enemy-manager.js" type="module"></script>
+	}
+}

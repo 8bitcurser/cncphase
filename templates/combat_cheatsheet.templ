@@ -1,0 +1,82 @@
+package templates
+
+templ CombatCheatsheet() {
+	@Layout("Combat Rules") {
+		<div class="cheatsheet">
+			<h2>Crown and Skull Combat Cheatsheet</h2>
+
+			<section class="rule-section">
+				<h3>The 5 Phases</h3>
+				<ul>
+					<li>Combat is divided into 5 phases per round</li>
+					<li>Players choose which phase they act in before combat starts</li>
+					<li>Once chosen, your phase is locked for the encounter</li>
+					<li>Multiple players can choose the same phase</li>
+					<li>Enemies act in 1-3 phases per round (specified in their stat block)</li>
+					<li>When heroes and enemies share a phase, heroes go first</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>On Your Phase</h3>
+				<ul>
+					<li><strong>Move:</strong> Move about 6" table space (or reasonable distance). Small sidesteps allowed without using your phase</li>
+					<li><strong>Perform an Action:</strong> Make an attack, use a skill, cast a spell, or perform one discrete action</li>
+					<li><strong>Hurry:</strong> Move AND take an action, but all enemies gain +5 ATK against you for 1 round (due to clumsy haste)</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Making Rolls</h3>
+				<ul>
+					<li><strong>Skill Rolls:</strong> Roll D20 at or below your skill value to succeed</li>
+					<li><strong>Defense Rolls:</strong> When attacked, roll D20 at or below your Defense value minus the enemy's ATK</li>
+					<li><strong>Damage Rolls:</strong> NO TO-HIT ROLLS! When you attack, roll damage directly. Enemy DEF may reduce it</li>
+					<li><strong>Critical Success:</strong> D20 roll of 1 = maximum success</li>
+					<li><strong>Critical Failure:</strong> D20 roll of 20 = maximum failure</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Attrition (Damage System)</h3>
+				<ul>
+					<li><strong>Basic Attrition:</strong> Cross off any 1 equipment or skill</li>
+					<li><strong>Flesh Attrition:</strong> Randomly select a skill and cross it off</li>
+					<li><strong>Equipment Attrition:</strong> Randomly select 1 equipment and cross it off</li>
+					<li><strong>Destroy Attrition:</strong> Destroy 1 random equipment AND cross off 1 random skill (destroyed = permanently lost)</li>
+					<li><strong>Brutal Attrition:</strong> Cross off 1D6 total random equipment and skills</li>
+					<li>Crossed-off items cannot be used until restored or repaired</li>
+					<li><strong>Death:</strong> If you have no inventory left to absorb a hit, you take a "hit to the heart" and die at the end of the next Phase 5 unless healed</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Healing and Recovery</h3>
+				<ul>
+					<li><strong>Healing:</strong> Successful heal (magic, potion, first aid) restores 1 crossed-off skill</li>
+					<li><strong>Repair:</strong> Use repair or armorer skill to restore damaged equipment</li>
+					<li><strong>Take a Breather:</strong> After each scene (when safe), regain 1 equipment or skill</li>
+					<li><strong>Rest:</strong> A night's rest in safety regains 1D4 combined equipment and skills</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>Enemy Stats</h3>
+				<ul>
+					<li><strong>ATK:</strong> Penalty applied to your Defense rolls when defending against their attacks</li>
+					<li><strong>DEF:</strong> Reduces damage you deal to them</li>
+					<li><strong>Phases:</strong> Which phases the enemy acts in (e.g., 1, 3, 5)</li>
+				</ul>
+			</section>
+
+			<section class="rule-section">
+				<h3>The Extremes</h3>
+				<ul>
+					<li><strong>Hero Coins:</strong> Reroll any roll OR maximize damage/output of an attack. Can be freely given between players. Max 1 coin per player</li>
+					<li><strong>Negotiation:</strong> Ask the GM for environmental advantages to reduce difficulty</li>
+					<li>Player-facing design means YOU make most rolls, not the GM!</li>
+				</ul>
+			</section>
+		</div>
+	}
+}

@@ -1,0 +1,173 @@
+package templates
+
+templ CombatTracker() {
+	@Layout("Combat Tracker") {
+		<div class="combat-tracker">
+			<h2>Crown and Skull Combat Tracker</h2>
+
+			<!-- Round Counter - Large Display -->
+			<div class="round-phase-display">
+				<div class="round-counter">
+					<div class="counter-label">Round</div>
+					<div class="counter-value" id="round-display">1</div>
+				</div>
+				<div class="phase-counter">
+					<div class="counter-label">Phase</div>
+					<div class="counter-value" id="phase-display">1</div>
+				</div>
+			</div>
+
+			<!-- Phase Map - Visual representation -->
+			<div class="phase-map">
+				<h3>Phase Map</h3>
+				<div class="phase-map-grid">
+					<div class="phase-column" data-phase="1">
+						<div class="phase-header">Phase 1</div>
+						<div class="phase-combatants" id="phase-combatants-1"></div>
+					</div>
+					<div class="phase-column" data-phase="2">
+						<div class="phase-header">Phase 2</div>
+						<div class="phase-combatants" id="phase-combatants-2"></div>
+					</div>
+					<div class="phase-column" data-phase="3">
+						<div class="phase-header">Phase 3</div>
+						<div class="phase-combatants" id="phase-combatants-3"></div>
+					</div>
+					<div class="phase-column" data-phase="4">
+						<div class="phase-header">Phase 4</div>
+						<div class="phase-combatants" id="phase-combatants-4"></div>
+					</div>
+					<div class="phase-column" data-phase="5">
+						<div class="phase-header">Phase 5</div>
+						<div class="phase-combatants" id="phase-combatants-5"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Control Buttons -->
+			<div class="tracker-controls">
+				<div class="control-buttons">
+					<button id="manage-players-btn" class="btn btn-accent">Manage Players</button>
+					<button id="load-players-btn" class="btn btn-primary">Load Players</button>
+					<button id="add-combatant-btn" class="btn btn-primary">Add Combatant</button>
+					<button id="search-enemy-btn" class="btn btn-primary">Search Enemy</button>
+					<button id="next-phase-btn" class="btn">Next Phase</button>
+					<button id="reset-combat-btn" class="btn btn-danger">Reset Combat</button>
+				</div>
+			</div>
+
+			<!-- Enemy Search Modal -->
+			<div id="enemy-search-modal" class="modal hidden">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<h3>Search Enemy/NPC</h3>
+					<div class="search-section">
+						<input type="text" id="enemy-quick-search" placeholder="Type to search enemies..." class="search-input"/>
+						<div id="enemy-search-results" class="search-results"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Player Management Modal -->
+			<div id="player-management-modal" class="modal hidden">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<h3>Manage Players</h3>
+					<div id="saved-players-list" class="saved-players-list"></div>
+					<button id="create-new-player-btn" class="btn btn-primary">Create New Player</button>
+				</div>
+			</div>
+
+			<!-- Create/Edit Player Modal -->
+			<div id="player-form-modal" class="modal hidden">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<h3 id="player-form-title">Create Player</h3>
+					<form id="player-form">
+						<div class="form-group">
+							<label for="player-name">Name:</label>
+							<input type="text" id="player-name" name="name" required/>
+						</div>
+						<div class="form-group">
+							<label for="player-phase">Phase (1-5):</label>
+							<input type="number" id="player-phase" name="phase" min="1" max="5" value="3" required/>
+						</div>
+						<div class="form-group">
+							<label for="player-defense">Defense:</label>
+							<input type="number" id="player-defense" name="defense" min="1" value="10" required/>
+						</div>
+						<div class="form-group">
+							<label for="player-inventory">Inventory Count:</label>
+							<input type="number" id="player-inventory" name="inventory" min="1" max="30" value="20" required/>
+							<small>Number of inventory slots (skills + equipment)</small>
+						</div>
+						<div class="form-buttons">
+							<button type="submit" class="btn btn-primary">Save Player</button>
+							<button type="button" class="modal-close btn">Cancel</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- Load Players Modal -->
+			<div id="load-players-modal" class="modal hidden">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<h3>Load Players into Combat</h3>
+					<div id="load-players-list" class="load-players-list"></div>
+					<div class="modal-actions">
+						<button id="load-selected-players-btn" class="btn btn-primary">Load Selected</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="add-combatant-form" class="form-container hidden">
+				<h3>Add New Combatant</h3>
+				<form id="new-combatant-form">
+					<div class="form-group">
+						<label for="combatant-name">Name:</label>
+						<input type="text" id="combatant-name" name="name" required/>
+					</div>
+					<div class="form-group">
+						<label for="combatant-type">Type:</label>
+						<select id="combatant-type" name="type">
+							<option value="PC">Player Character</option>
+							<option value="Enemy">Enemy</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="combatant-phase">Phase:</label>
+						<input type="text" id="combatant-phase" name="phase" placeholder="1-5 or 1,3,5" title="Single phase (1-5) or multiple phases for enemies (e.g., 1,3,5)" required/>
+						<small>Single phase for PCs (1-5), multiple for enemies (e.g., 1,3,5)</small>
+					</div>
+					<div class="form-group">
+						<label for="combatant-defense">Defense:</label>
+						<input type="number" id="combatant-defense" name="defense" min="1" value="10" required/>
+					</div>
+					<div class="form-group" id="atk-group">
+						<label for="combatant-atk">ATK (enemies only):</label>
+						<input type="number" id="combatant-atk" name="atk" min="0" value="0"/>
+					</div>
+					<div class="form-group" id="def-group">
+						<label for="combatant-def">DEF (enemies only):</label>
+						<input type="number" id="combatant-def" name="def" min="0" value="0"/>
+					</div>
+					<div class="form-buttons">
+						<button type="submit" class="btn btn-primary">Add</button>
+						<button type="button" id="cancel-add-btn" class="btn">Cancel</button>
+					</div>
+				</form>
+			</div>
+
+			<div id="combatants-list" class="combatants-list">
+			</div>
+
+			<div id="empty-state" class="empty-state">
+				<p>No combatants yet. Click "Add Combatant" to start tracking combat.</p>
+			</div>
+		</div>
+		<script src="/static/js/combatant-card.js" type="module"></script>
+		<script src="/static/js/status-manager.js" type="module"></script>
+		<script src="/static/js/combat-tracker.js" type="module"></script>
+	}
+}
