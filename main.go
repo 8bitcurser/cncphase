@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -22,7 +23,14 @@ func main() {
 	mux.HandleFunc("/enemy-manager", handlers.EnemyManagerHandler)
 	mux.HandleFunc("/random-tables", handlers.RandomTablesHandler)
 
-	port := ":8080"
-	fmt.Printf("Crown and Skull GM Webapp starting on http://localhost%s\n", port)
-	log.Fatal(http.ListenAndServe(port, mux))
+	// Get port from environment variable or default to 8080
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	// Bind to 0.0.0.0 (all interfaces) for container environments
+	addr := "0.0.0.0:" + port
+	fmt.Printf("Crown and Skull GM Webapp starting on http://localhost:%s\n", port)
+	log.Fatal(http.ListenAndServe(addr, mux))
 }
