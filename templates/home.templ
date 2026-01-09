@@ -7,7 +7,17 @@ templ Home() {
 		Path:        "/",
 		Keywords:    "crown and skull, rpg, game master tools, combat tracker, enemy manager, tabletop rpg, gm tools, dungeon master",
 	}) {
-		<div class="dashboard">
+		<!-- Splash Screen -->
+		<div id="splash-screen" class="splash-screen-animated">
+			<div class="torch-left"></div>
+			<div class="torch-right"></div>
+			<div class="splash-content">
+				<button id="enter-dungeon-btn" class="btn-enter-dungeon">Enter the Dungeon</button>
+			</div>
+		</div>
+
+		<!-- Main Dashboard (hidden initially) -->
+		<div id="main-dashboard" class="dashboard" style="display: none;">
 			<h2>Welcome, Game Master</h2>
 			<p>Select a tool to help run your Crown and Skull game:</p>
 			<div class="card-grid">
@@ -38,5 +48,26 @@ templ Home() {
 				</div>
 			</div>
 		</div>
+
+		<script>
+			// Splash screen functionality
+			document.addEventListener('DOMContentLoaded', function() {
+				const splashScreen = document.getElementById('splash-screen');
+				const mainDashboard = document.getElementById('main-dashboard');
+				const enterBtn = document.getElementById('enter-dungeon-btn');
+
+				enterBtn.addEventListener('click', function() {
+					splashScreen.style.opacity = '0';
+					setTimeout(() => {
+						splashScreen.style.display = 'none';
+						mainDashboard.style.display = 'block';
+						mainDashboard.style.opacity = '0';
+						setTimeout(() => {
+							mainDashboard.style.opacity = '1';
+						}, 50);
+					}, 500);
+				});
+			});
+		</script>
 	}
 }

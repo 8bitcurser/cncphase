@@ -2132,8 +2132,6 @@ footer a:hover {
   align-items: center;
   justify-content: center;
   padding: var(--spacing-2xl);
-  position: relative;
-  z-index: 10;
 }
 
 .btn-enter-dungeon {
@@ -2212,7 +2210,7 @@ nav .dropdown-menu {
   box-shadow: var(--pixel-border-shadow), 0 8px 16px rgba(0, 0, 0, 0.8);
   min-width: 200px;
   z-index: 1000;
-  margin-top: 0;
+  margin-top: var(--spacing-sm);
   padding: 0;
   list-style: none;
 }
@@ -2224,10 +2222,6 @@ nav .dropdown:hover .dropdown-menu {
 nav .dropdown-menu li {
   margin: 0;
   border-bottom: var(--border-thin) solid var(--color-border);
-}
-
-nav .dropdown-menu li:first-child a {
-  padding-top: calc(var(--spacing-md) + 4px);
 }
 
 nav .dropdown-menu li:last-child {
@@ -2310,8 +2304,9 @@ nav .dropdown-menu a:hover {
    Uncomment this section and comment out the .splash-screen above to use
    an animated dungeon entrance instead of the background image.
    Also change class="splash-screen" to class="splash-screen-animated" in home.templ
-   ============================================================================ */
+   ============================================================================ 
 
+/*
 .splash-screen-animated {
   position: fixed;
   top: 0;
@@ -2392,3 +2387,4 @@ nav .dropdown-menu a:hover {
     transform: scale(1.1);
   }
 }
+*/
