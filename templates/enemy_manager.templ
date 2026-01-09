@@ -1,7 +1,12 @@
 package templates
 
 templ EnemyManager() {
-	@Layout("Enemy Manager") {
+	@Layout(PageMeta{
+		Title:       "Enemy Manager",
+		Description: "Browse and manage 25+ Crown and Skull enemies. View full stat blocks, tactics, and quickly add enemies to combat encounters.",
+		Path:        "/enemy-manager",
+		Keywords:    "crown and skull enemies, monster manager, rpg bestiary, enemy stat blocks, npc manager",
+	}) {
 		<div class="enemy-manager">
 			<h2>Enemy & NPC Manager</h2>
 

@@ -1,7 +1,12 @@
 package templates
 
 templ RandomTables() {
-	@Layout("Random Tables") {
+	@Layout(PageMeta{
+		Title:       "Random Tables",
+		Description: "Roll on Crown and Skull random tables including treasure, NPCs, potions, herbalism, and enemy modifications. Includes roll history tracking.",
+		Path:        "/random-tables",
+		Keywords:    "random tables, rpg generators, treasure tables, npc generator, crown and skull tables",
+	}) {
 		<div class="random-tables">
 			<h2>GM Random Tables</h2>
 

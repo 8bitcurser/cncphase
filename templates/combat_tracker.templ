@@ -1,7 +1,12 @@
 package templates
 
 templ CombatTracker() {
-	@Layout("Combat Tracker") {
+	@Layout(PageMeta{
+		Title:       "Combat Tracker",
+		Description: "Track initiative phases, defense, ATK/DEF, attrition, and status effects during Crown and Skull combat encounters. Manage players and enemies in real-time.",
+		Path:        "/combat-tracker",
+		Keywords:    "combat tracker, initiative tracker, crown and skull combat, rpg battle tracker, gm combat tools",
+	}) {
 		<div class="combat-tracker">
 			<h2>Crown and Skull Combat Tracker</h2>
 

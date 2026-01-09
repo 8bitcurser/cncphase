@@ -1,7 +1,12 @@
 package templates
 
 templ Home() {
-	@Layout("Home") {
+	@Layout(PageMeta{
+		Title:       "Home",
+		Description: "Crown and Skull GM Tools - Combat tracker, enemy manager, spell references, and random tables for Game Masters running Crown and Skull RPG sessions.",
+		Path:        "/",
+		Keywords:    "crown and skull, rpg, game master tools, combat tracker, enemy manager, tabletop rpg, gm tools, dungeon master",
+	}) {
 		<div class="dashboard">
 			<h2>Welcome, Game Master</h2>
 			<p>Select a tool to help run your Crown and Skull game:</p>

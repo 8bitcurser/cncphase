@@ -1,12 +1,62 @@
 package templates
 
-templ Layout(title string) {
+type PageMeta struct {
+	Title       string
+	Description string
+	Path        string
+	Keywords    string
+}
+
+templ Layout(meta PageMeta) {
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-			<title>{ title } - Crown and Skull GM</title>
+			<title>{ meta.Title } - Crown and Skull GM</title>
+
+			<!-- SEO Meta Tags -->
+			<meta name="description" content={ meta.Description }/>
+			<meta name="keywords" content={ meta.Keywords }/>
+			<meta name="author" content="Crown and Skull GM Tools"/>
+			<meta name="robots" content="index, follow"/>
+			<link rel="canonical" href={ "https://royaljester.xyz" + meta.Path }/>
+
+			<!-- Open Graph / Facebook -->
+			<meta property="og:type" content="website"/>
+			<meta property="og:url" content={ "https://royaljester.xyz" + meta.Path }/>
+			<meta property="og:title" content={ meta.Title + " - Crown and Skull GM" }/>
+			<meta property="og:description" content={ meta.Description }/>
+			<meta property="og:site_name" content="Crown and Skull GM Tools"/>
+
+			<!-- Twitter Card -->
+			<meta name="twitter:card" content="summary"/>
+			<meta name="twitter:title" content={ meta.Title + " - Crown and Skull GM" }/>
+			<meta name="twitter:description" content={ meta.Description }/>
+
+			<!-- JSON-LD Structured Data -->
+			<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebApplication",
+				"name": "Crown and Skull GM Tools",
+				"applicationCategory": "GameApplication",
+				"description": "Game Master tools for Crown and Skull RPG - combat tracker, enemy manager, spell references, and random tables",
+				"url": "https://royaljester.xyz",
+				"operatingSystem": "Web",
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD"
+				},
+				"about": {
+					"@type": "Game",
+					"name": "Crown and Skull",
+					"gameItem": "Tabletop Role-Playing Game"
+				}
+			}
+			</script>
+
 			<link rel="stylesheet" href="/static/css/style.css"/>
 			<link rel="stylesheet" href="/static/css/retro-style.css"/>
 		</head>
@@ -26,7 +76,7 @@ templ Layout(title string) {
 				{ children... }
 			</main>
 			<footer>
-				<p>Crown and Skull GM Webapp</p>
+				<p>Crown and Skull GM Webapp - Game Master Tools for Crown and Skull RPG</p>
 			</footer>
 		</body>
 	</html>

@@ -1,7 +1,12 @@
 package templates
 
 templ MagicCheatsheet() {
-	@Layout("Magic Rules") {
+	@Layout(PageMeta{
+		Title:       "Magic Rules",
+		Description: "Reference guide for Crown and Skull spell casting, spell customization, magical effects, and spellcasting limitations.",
+		Path:        "/cheatsheet/magic",
+		Keywords:    "crown and skull magic, spell casting rules, rpg magic system, spell customization",
+	}) {
 		<div class="cheatsheet">
 			<h2>Crown and Skull Magic Cheatsheet</h2>
 

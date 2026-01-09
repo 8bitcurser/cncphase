@@ -1,7 +1,12 @@
 package templates
 
 templ CombatCheatsheet() {
-	@Layout("Combat Rules") {
+	@Layout(PageMeta{
+		Title:       "Combat Rules",
+		Description: "Quick reference for Crown and Skull 5-phase combat system, defense rolls, attrition mechanics, and damage resolution.",
+		Path:        "/cheatsheet/combat",
+		Keywords:    "crown and skull combat, 5-phase combat, rpg combat rules, defense rolls, attrition system",
+	}) {
 		<div class="cheatsheet">
 			<h2>Crown and Skull Combat Cheatsheet</h2>
 
